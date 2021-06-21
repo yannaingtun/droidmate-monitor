@@ -55,6 +55,8 @@ class ApkInlinerTest {
         // Call method under test
         var AI = ApkInliner(workingPath)
         AI.instrumentApk(inputPath, outputPath)
+        
+        log.out(AI.toString(),"YNT *****")
 
         // Check 1: All *-inlined.apk's were generated
         instrFileList.forEach { p -> assert(Files.exists(p)) }
